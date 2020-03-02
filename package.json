@@ -1,0 +1,19 @@
+{
+  "name": "CSS_lecture",
+  "version": "1.0.0",
+  "description": "CSS Master Class with Nicolas",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hami-dev/CSS_class.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hami-dev/CSS_class/issues"
+  },
+  "homepage": "https://github.com/hami-dev/CSS_class#readme",
+  "scripts":{
+    "start": "parcel index.html"
+  }
+}
