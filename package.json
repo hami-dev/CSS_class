@@ -13,7 +13,17 @@
     "url": "https://github.com/hami-dev/CSS_class/issues"
   },
   "homepage": "https://github.com/hami-dev/CSS_class#readme",
-  "scripts":{
+  "scripts": {
     "start": "parcel index.html"
+  },
+  "dependencies": {
+    "postcss-preset-env": "^6.7.0"
+  }, 
+  "postcss": {
+    "plugins":{
+      "postcss-preset-env":{
+        "stage":0
+      }
+    }
   }
 }
