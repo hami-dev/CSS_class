@@ -18,18 +18,54 @@
 
 
 /* 위에 root에서 선언한 애들을 변수처럼 사용 가능 */
-li:nth-child(even) a{
+/* li:nth-child(even) a{
   color: var(--awesomeColor);
   border: var(--coolLine);
-}
+} */
 
 
 /* --headers 가 h1,h2,h3,h4,h5,h6을 포함하겠다는 뜻 */
-@custom-selector :--headers h1,h2,h3,h4,h5,h6;
+/* @custom-selector :--headers h1,h2,h3,h4,h5,h6; */
 
 /* 그래서 그 --headers 를 불러다가 스타일을 주면
 h1~h6이 전부 일괄적으로 바뀌게됨 
 하나하나 따로 설정 안해도 되고 */
-:--headers{
+/* :--headers{
   color: red;
+} */
+
+
+/* @custom-media --ipad-size (max-width: 850px); */
+/* @custom-media --ipad-size (width <= 850px); */
+/* @custom-media --ipad-size (600px <= width < 850px);
+
+@media (--ipad-size){
+  body{
+    background-color: var(--awesomeColor);
+  }
+} */
+
+
+/* color-mod */
+/* h1 {
+  color: #00cec9;
 }
+
+h1:hover{
+  color: color-mod(#00cec9 blackness(50%));
+} */
+
+
+/* gray 숫자가 클수록 흐려진다*/
+/* h1 {
+  color : gray(90);
+} */
+
+
+/* system-ui = short cut! */
+h1 {
+  font-family: system-ui;
+}
+
+
+
