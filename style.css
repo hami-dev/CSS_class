@@ -63,9 +63,38 @@ h1:hover{
 
 
 /* system-ui = short cut! */
-h1 {
+/* h1 {
   font-family: system-ui;
+} */
+
+
+
+/* Nesting rules */
+/* main{
+  background-color: blueviolet;
 }
 
+main section{
+  background-color: red;
+} */
 
+main{
+  background-color: blueviolet;
 
+  & section{
+    background-color: red;
+    width: 600px;
+
+    & li{
+      background-color: yellow;
+      width: 300px;
+
+      & a{
+        color: black;
+        &:hover{
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}
