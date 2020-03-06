@@ -14,7 +14,8 @@
   },
   "homepage": "https://github.com/hami-dev/CSS_class#readme",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "start2": "parcel ./CSS_project1/project1.html"
   },
   "devDependencies": {
     "postcss-color-mod-function": "^3.0.3",
