@@ -1,0 +1,168 @@
+:root {
+    --colorGray: #f6f6f6;
+    --borderTop: 1px solid rgb(206, 206, 206);
+}
+
+body {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 5px;
+    background-color: var(--colorGray);
+}
+
+h1, h2, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    margin-top: 25px;
+    padding-bottom: 20px;
+}
+
+.navigation {
+    padding : 0px 25p;
+    margin-bottom: 30px;
+}
+
+.navigation .navigation__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-gap: 20px;
+    justify-content: space-around;
+}
+
+.navigation__list .navigation__item {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    text-align: center;
+    transition: opacity 0.1s linear;
+    margin-top: 10px;
+}
+
+.navigation__item .item__icon {
+    background-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 5px 10px gray, 0 6px 6px gray;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow 0.2s linear;
+}
+
+.navigation__list:hover .navigation__item {
+    opacity: 0.4;
+}
+
+.navigation__list .navigation__item:hover {
+    opacity: 1;
+}
+
+.navigation__item .item__emoji {
+    font-size: 25px;
+    align-self: center;
+    justify-self: center;
+}
+
+
+/* featured meals 옆으로 넘기는 부분 */
+.featured {
+    padding: 20px 0 5px;
+    margin: 0;
+    font-size: 15px;
+    border-top: var(--borderTop);
+}
+
+.featured .featured__title {
+    padding-bottom: 15px;
+}
+
+.featured .featured__wrapper {
+    overflow: scroll;
+    display: grid;
+    grid-auto-columns: minmax(170px, 1fr);
+    grid-auto-flow: column;
+    grid-gap: 10px;
+}
+
+.featured__meal {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0 5px 20px;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 10px 10px rgb(187, 187, 187);
+}
+
+.featured__meal .featured__meal__btn {
+    padding: 2px;
+    border-radius: 25%;
+
+}
+
+.featured__meal:first-child {
+    background-image: url(https://cdn.pixabay.com/photo/2015/07/16/09/36/pasta-847431_960_720.jpg);
+}
+
+.featured__meal:nth-child(2) {
+background-image: url(https://cdn.pixabay.com/photo/2014/11/27/05/53/pizza-547241_960_720.jpg);
+}
+
+.featured__meal:nth-child(3) {
+background-image: url(https://cdn.pixabay.com/photo/2019/07/23/06/47/food-4356696_960_720.jpg);
+}
+
+.featured__meal:nth-child(4) {
+    background-image: url(https://cdn.pixabay.com/photo/2017/03/23/19/57/asparagus-2169305_960_720.jpg);
+}
+
+.featured__meal:nth-child(5) {
+        background-image: url(https://cdn.pixabay.com/photo/2017/03/06/15/50/food-2121826_960_720.jpg);
+}
+
+.featured__meal__title {
+    margin-right: 10px;
+    color: white;
+}
+
+.featured__meal__btn {
+    background-color: white;
+    font-size: 10px;
+    border: none;
+    box-shadow: yellow;
+}
+
+
+/* 밑에 메뉴 선택하는 목록부분 */
+.recipes {
+    margin-top: 10px;
+    border-top: var(--borderTop);
+}
+
+.recipes__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recipes__list .recipe:nth-child(odd) {
+    background-color: white;
+}
+
+.recipes__list .recipe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+}
+
