@@ -16,7 +16,8 @@
   "scripts": {
     "start": "parcel index.html",
     "start2": "parcel ./CSS_project1/project1.html",
-    "start3": "parcel ./CSS_project2/project2.html"
+    "start3": "parcel ./CSS_project2/project2.html",
+    "start4": "parcel ./CSS_project3/project3_1.html"
   },
   "devDependencies": {
     "postcss-color-mod-function": "^3.0.3",
