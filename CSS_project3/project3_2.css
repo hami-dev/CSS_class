@@ -1,0 +1,131 @@
+:root{
+    --colorLightergray: rgb(236, 236, 236);
+    --colorLightgray: rgb(202, 202, 202);
+    --colorgray: rgb(167, 167, 167);
+    --colorDarkgray: rgb(87, 87, 87);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.section__header {
+    padding: 30px 20px 20px;
+}
+
+.header__title {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--colorDarkgray);
+}
+
+.header__subtitle {
+    color: var(--colorgray);
+}
+
+.section__contents {
+    margin: 20px 15px;
+    display: grid;
+    grid-gap: 5px;
+    grid-auto-rows: 110px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.section__contents .contents__item {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+
+    & .item__title, & .item__comment {
+        align-self: center;
+        padding: 0 5px;
+    }
+    
+    & .item__title {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: var(--colorDarkgray);
+    }
+
+    & .item__comment {
+        font-size: 0.9em;
+        color: var(--colorgray);
+    }
+}
+
+
+.contents__item .item__photo {
+    background-position: center center;
+    background-size: cover;
+    grid-area: span 4 / span 1;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.contents__item:nth-child(1){
+    grid-area: span 1 / span 2;
+    border-radius: 15px;
+    background-image: url(https://cdn.pixabay.com/photo/2017/08/03/21/11/art-2578353__340.jpg);
+
+    & .item__title {
+        grid-area: span 4 / span 1;
+        color: white;
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    & .item__comment {
+        grid-area: span 2 / span 1;
+        color:  white;
+        padding: 0 20px;
+    }
+}
+
+
+
+.contents__item:nth-child(2) {
+    grid-area: span 3 / span 1;
+}
+
+.contents__item:nth-child(2) .item__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2018/03/30/15/11/deer-3275594_960_720.jpg);
+}
+
+.contents__item:nth-child(3) {
+    grid-area: span 2 / span 1;
+}
+
+.contents__item:nth-child(3) .item__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2017/11/15/09/28/music-player-2951399__340.jpg);
+}
+
+.contents__item:nth-child(4) {
+    grid-area: span 3 / span 1;
+}
+
+.contents__item:nth-child(4) .item__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2017/06/10/22/58/composing-2391033_960_720.jpg);
+}
+
+.contents__item:nth-child(5) {
+    grid-area: span 2 / span 1;
+}
+
+
+.contents__item:nth-child(5) .item__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2017/08/09/20/37/abstract-2615741_960_720.jpg);
+
+}
+
+.contents__item:nth-child(6) {
+    grid-area: span 2 / span 1;
+}
+
+
+.contents__item:nth-child(6) .item__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2016/10/17/14/31/modern-1747779_960_720.jpg);
+}
+
+
+
