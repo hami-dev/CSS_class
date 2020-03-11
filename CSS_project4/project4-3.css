@@ -1,0 +1,172 @@
+:root {
+    --colorLightergray: rgb(243, 243, 243);
+    --colorLightgray: rgb(224, 224, 224);
+    --colorgray: rgb(177, 177, 177);
+    --colorDarkgray: rgb(126, 126, 126);
+    --colorDarkergray: rgb(70, 70, 70);
+    --colorTransgray: rgba(0, 0, 0, 0.164);
+    --colorRed: rgb(255, 67, 67);
+    --colorPink: rgb(255, 124, 124);
+    --colorBlue: rgb(85, 150, 255);
+    --colorTransWhite: rgba(255, 255, 255, 0.7);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main__photo {
+    background-position: center center;
+    background-size: cover;
+    height: 70vh;
+    background-image: url(https://cdn.pixabay.com/photo/2016/12/23/12/40/night-1927265_960_720.jpg);
+    padding: 10px;
+}
+
+
+.main__followers {
+    position: relative;
+    top: 35vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main__followers .follower__info {
+    color: var(--colorLightgray);
+    display: grid;
+    justify-content: center;
+    & .follower__info__num {
+        font-weight: bold;
+        font-size: 1.2em
+    }
+
+    & .follower__info__comment {
+        font-size: 0.9em;
+    }
+}
+
+.main__title {
+    position: relative;
+    background-color: var(--colorTransWhite);
+    top: -25vh;
+    height: 20vh;
+    border-radius: 20px 20px 0 0;
+    padding: 30px 10px 10px 20px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.main__title .title__name {
+    font-size: 2em;
+    color: var(--colorDarkergray);
+    font-weight: bold;
+}
+
+.main__title .title__comment {
+    padding-top: 15px;
+    font-size: 1.1em;
+    color: var(--colorDarkgray);
+}
+
+.main__title .title__btn__follow {
+    padding: 15px 0 0;
+
+    & span {
+        padding: 10px 20px;
+        border: 3px solid var(--colorBlue);
+        border-radius: 25px;
+        text-align: center;
+        font-size: 1.1em;
+        color: var(--colorBlue);
+        font-weight: bold;
+    }
+}
+
+.main__intro {
+    position: relative;
+    background-color: white;
+    top: -30vh;
+    height: 60vh;
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+}
+
+.main__intro .intro__title {
+    color: var(--colorDarkgray);
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 0 0;
+}
+
+.main__intro .intro__content {
+    padding: 25px 0;
+
+    & span {
+        color: var(--colorBlue);
+    }
+}
+
+.main__intro .intro__line {
+    border-top: 1px solid var(--colorLightgray);
+    padding: 10px 0 5px;
+}
+
+.main__intro .intro__photos {
+    padding: 20px 0 ;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 20vh);
+    grid-auto-flow: column;
+    grid-gap: 12px;
+}
+
+.intro__photos .photo__item{
+    background-position: center center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+.photo__item:nth-child(1) {
+    grid-area: span 2 /span 2;
+    background-image: url(https://cdn.pixabay.com/photo/2016/12/06/15/26/christmas-cookies-1886760__340.jpg);
+}
+
+.photo__item:nth-child(2) {
+    background-image: url(https://cdn.pixabay.com/photo/2014/12/02/03/04/christmas-cookies-553457__340.jpg);
+}
+
+.photo__item:nth-child(3) {
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/11/17/32/cookie-1817286__340.jpg);
+}
+
+.photo__item:nth-child(4) {
+    display: flex;
+    grid-area: span 2 /span 1;
+    background-image: url(https://cdn.pixabay.com/photo/2017/03/27/12/39/abstract-2178446__340.jpg);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+.intro__btn__seeall {
+    background-color: var(--colorBlue);
+    border-radius: 25px;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 2px 3px 5px var(--colorTransgray);
+    margin-bottom: 30px;
+}
