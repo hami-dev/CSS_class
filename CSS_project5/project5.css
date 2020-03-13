@@ -12,10 +12,11 @@ body {
 }
 
 
-body, html{
+body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
 }
 
 .nav__btns svg {
@@ -57,10 +58,10 @@ body, html{
     grid-template-columns: repeat(3, 1fr);
     align-items: flex-end;
     padding: 0 5px 5px;
-}
 
-.nav__btns .nav__btn {
-    padding: 0px 15px;
+    & .nav__btn{
+        padding: 0px 15px;
+    }
 }
 
 .fakeBg {
@@ -117,6 +118,7 @@ body, html{
 
 .list__people {
     padding: 20px;
+    margin-bottom: 50px;
 }
 
 .list__people .people__info {
@@ -125,19 +127,37 @@ body, html{
     padding: 10px 0px;
 }
 
+
 .people__info .people__info__name {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     align-items: center;
+
+    & .name {
+        font-weight: bold;
+        letter-spacing: 0.05em;
+    }
+
+    & .friends {
+        color: var(--colorDarkgray);
+        letter-spacing: 0.1em;
+        font-size: 0.9em;
+    }
+
 }
 
-.people__info .people__info__photo .photo {
-    height: 50px;
-    width: 50px;
-    background-position: center center;
-    background-size: cover;
-    margin: 10px;
-    box-shadow: var(--boxShadow);
+.people__info .people__info__photo {
+    justify-self: center;
+    margin-right: 5em;
+
+    & .photo {
+        height: 50px;
+        width: 50px;
+        background-position: center center;
+        background-size: cover;
+        margin: 10px;
+        box-shadow: var(--boxShadow);
+    }
 }
 
 
@@ -168,14 +188,17 @@ body, html{
     background-image: url(https://cdn.pixabay.com/photo/2018/04/27/03/51/woman-3353702__340.jpg);
 }
 
-.people__info__name .name {
-    font-weight: bold;
-    letter-spacing: 0.05em;
+.people__info:nth-child(7) .photo {
+    background-image: url(https://cdn.pixabay.com/photo/2017/03/27/14/02/beach-2178919__340.jpg);
 }
 
-.people__info__name .friends {
-    color: var(--colorDarkgray);
-    letter-spacing: 0.1em;
-    font-size: 0.9em;
+.follow__btn {
+    padding: 20px 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-image: var(--gradientBackground);
+    color: white;
+    letter-spacing: 0.2em;
+    border: none;
 }
-
