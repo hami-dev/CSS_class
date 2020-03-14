@@ -1,5 +1,6 @@
 :root {
     --boxShadow: 0px 20px 30px rgba(0, 0, 0, 0.185);
+    --boxShadow2: 0px 30px 50px rgba(0, 0, 0, 0.171);
     --colorLightgray: rgb(238, 238, 238);
     --colorgray: rgb(195, 195, 195);
     --colorDarkgray: rgb(160, 160, 160);
@@ -24,6 +25,8 @@ body {
     height: 80vh;
     background-color: var(--colorvioletgray);
     margin: auto;
+    box-shadow: var(--boxShadow2);
+
 }
 
 .nav {
@@ -63,6 +66,8 @@ body {
     box-shadow: var(--boxShadow);
 }
 
+
+
 .main__item .item__photo {
     background-position: center center;
     background-size: cover;
@@ -73,19 +78,30 @@ body {
 .main__item .item__comment {
     font-family: Georgia,Times,Times New Roman,serif; 
     text-align: center;
-    padding: 30px 0;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    margin: 10px 0;
+    align-items: center;
 }
 
-.item__comment div {
-    padding-top: 5px;
-}
-
-.item__comment div:nth-child(1) {
+.item__comment .item__title {
+    grid-area: span 2 / span 1;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
-.item__comment div:nth-child(2) {
+item__comment .item__subtitle {
     font-size: 0.9em;
+}
+
+.main__item .item__share{
+    text-align: right;
+    margin-right: 10px;
+    fill: white;
+}
+
+.main__wrapper .main__item .item__share:hover{
+    fill: var(--colorDarkgray);
 }
 
 
@@ -143,7 +159,7 @@ body {
 
 .nav__footer .footer__icons {
     grid-area: span 1 / span 2;
-    margin-left: 10em;
+    margin-left: 90px;
 }
 
 .nav__footer .footer__icons span {
