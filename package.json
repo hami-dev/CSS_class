@@ -24,8 +24,8 @@
     "start8": "parcel ./CSS_project4/project4-3.html",
     "project5": "parcel ./CSS_project5/project5.html",
     "project6": "parcel ./CSS_project6/project6.html",
-    "project7": "parcel ./CSS_project7/project7.html"
-
+    "project7": "parcel ./CSS_project7/project7.html",
+    "project8": "parcel ./CSS_project8/project8.html"
   },
   "devDependencies": {
     "postcss-color-mod-function": "^3.0.3",
