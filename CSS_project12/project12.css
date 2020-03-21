@@ -1,0 +1,166 @@
+:root {
+    --colorLightgray: rgb(228, 228, 228);
+    --colorgray: rgb(195, 195, 195);
+    --colorDarkgray: rgb(160, 160, 160);
+    --colorDarkergray: rgb(45, 45, 46);
+    --solid : 2px solid black;
+}
+    
+html, body { 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* header */
+
+.header__nav {
+    padding: 20px 60px 20px 30px;
+    background-color: gold;
+    display: flex;
+    justify-content: space-between;
+
+    & .header__pre_title {
+        font-size: 1.3em;
+        font-weight: 600;
+    }
+    
+    & .header__title {
+        font-size: 2em;
+        font-weight: 800;
+        text-align: right;
+    }
+
+    & span {
+        display: block;
+    }
+}
+
+
+/* main */
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 60px 0 0;
+}
+
+.main__title {
+    font-weight: 700;
+    border-bottom: var(--solid);
+    padding: 10px 0;
+    margin: 20px 0 20px 30px;
+}
+
+.main__nav .nav__contents {
+    margin: 20px 30px;
+}
+
+.main__nav ul {
+    list-style: none;
+
+    & li {
+        color: var(--colorDarkgray);
+        margin-bottom: 3px;
+    }
+
+    & li:first-child {
+        font-weight: 700;
+        color: black;
+    }
+}
+
+
+/* projects */
+
+.main__articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 15px;
+    margin: 20px 0 20px 30px;
+
+    & .photo {
+        width: 100%;
+        height: 30vh;
+        background-position: center center;
+        background-size: cover;
+    }
+    
+    & .title {
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-top: 10px;
+    }
+    
+    & .subtitle {
+        font-size: 0.8em;
+        color: var(--colorDarkgray);
+    }
+    
+    & .weather {
+        margin-top: 10px;
+        font-size: 0.8em;
+        color: var(--colorgray);
+    }
+    
+    & .author {
+        font-size: 0.9em;
+        color: var(--colorDarkergray);
+    }
+    
+    & .date {
+        margin-top: 10px;
+    }
+    
+    & .arrow {
+        padding: 20px 0 10px;
+        border-bottom: var(--solid);
+    }
+}
+
+
+.main__article:nth-child(1) .photo {
+
+    background-image: url(https://cdn.pixabay.com/photo/2017/10/10/21/47/laptop-2838921__340.jpg);
+}
+
+.main__article:nth-child(2) .photo {
+    background-image: url(https://cdn.pixabay.com/photo/2015/05/28/14/53/ux-788002__340.jpg);
+}
+
+
+.main__article:nth-child(3) .photo {
+    background-image: url(https://cdn.pixabay.com/photo/2015/01/14/18/41/home-office-599475__340.jpg);
+}
+
+
+
+/* right menu bar */
+
+.menubar {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 25px;
+    height: 100%;
+    background-color: black;
+
+    & svg {
+        fill: var(--colorgray);
+        width: 12px;
+        height: 15px;
+        margin-top: 20px
+    }
+}
