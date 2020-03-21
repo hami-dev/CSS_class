@@ -25,7 +25,6 @@ ul, li {
 
 .header__nav {
     padding: 20px 60px 20px 30px;
-    background-color: gold;
     display: flex;
     justify-content: space-between;
 
