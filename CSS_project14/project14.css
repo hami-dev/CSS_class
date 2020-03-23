@@ -16,6 +16,14 @@ html, body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+body {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+
+/* header */
 
 .header__nav {
     width: 100%;
@@ -29,22 +37,24 @@ html, body {
     
         & li {
             margin: 0 5px;
+            font-size: 0.8em;
+            font-weight: 600;
         }
     }
-    
-    
-    & span {
+
+    & svg {
+        width: 15px;
         margin-right: 20px;
     }
 }
 
 
 .header__photo {
-    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/06/42/adventure-1867868_640.jpg);
+    background-image: url(https://cdn.pixabay.com/photo/2018/03/02/18/29/snow-3193865_960_720.jpg);
     background-size: cover;
     background-position: center center;
     width: 98%;
-    height: 300px;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,12 +75,15 @@ html, body {
 /* main  */
 
 .main {
-    width: 95%;
-    background-color: rgb(160, 160, 160);
+    width: 90%;
+    align-self: center;
 }
 
-.main__title__blog {
-    margin-top: 30px;
+
+/* title  */
+
+.main__title {
+    margin-top: 50px;
     padding: 10px;
     text-align: center;
 
@@ -87,20 +100,236 @@ html, body {
 }
 
 
+/* article  */
+
 .main__articles {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 200px;
-    grid-gap: 10px;
+    grid-gap: 30px;
 }
 
 .article {
-    background-color: rgb(216, 216, 255);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+}
+
+.article:nth-child(odd) {
+    margin-left: 50px;
+}
+
+.article:nth-child(even) {
+    margin-right: 50px;
 }
 
 
+.article:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & span {
+        margin: 10px 0;
+        font-size: 0.9em;
+        font-weight: 600;
+    }
+
+    & span:nth-child(2) {
+        color: var(--colorDarkgray);
+    }
+
+    & span:last-child {
+        border: 1.5px solid var(--colorDarkgray);
+        padding: 10px;
+        font-size: 0.7em;
+    }
+}
+
+.article:nth-child(2) {
+    background-image: url(https://cdn.pixabay.com/photo/2017/01/06/20/43/soap-bubble-1958841__340.jpg);
+}
+
+.article:nth-child(3) {
+    background-image: url(https://cdn.pixabay.com/photo/2015/12/08/05/58/ice-skates-1082514__340.jpg);
+    width: 60%;
+    justify-self: center;
+}
+
+.article:nth-child(4),
+.article:nth-child(5) {
+    width: 60%;
+    justify-self: center;
+    align-items: center;
+    font-size: 0.9em;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+.article:nth-child(6) {
+    background-image: url(https://cdn.pixabay.com/photo/2017/12/22/11/09/schilthorn-3033448__340.jpg);
+    width: 55%;
+    justify-self: center;
+}
 
 .article:nth-child(7) {
     grid-area: span 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+
+    & span {
+        margin: 10px;
+        font-size: 0.8em;
+        color: var(--colorDarkgray);
+    }
+
+    & svg {
+        width: 18px;
+        fill: var(--colorDarkgray);
+    }
+
+    & span:first-child svg {
+        transform: rotate(180deg);
+    }
 }
 
+.article:nth-child(8) {
+    background-image: url(https://cdn.pixabay.com/photo/2014/12/04/14/32/winter-barn-556696__340.jpg);
+    margin: 0 0 0 50px;
+    height: 70%;
+
+    & .article__sub {
+        background-color: white;
+        height: 20px;
+        width: 100%;
+        position: relative;
+        bottom: -100%;
+    }
+}
+
+.article:nth-child(9) {
+    background-image: url(https://cdn.pixabay.com/photo/2018/01/21/19/55/snow-3097418__340.jpg);
+    margin: 0 50px 0 0;
+    width: 50%;
+    justify-self: center;
+    
+    & .article__sub {
+        background-color: white;
+        height: 20px;
+        transform: rotate(270deg);
+        position: relative;
+        right: -70%;
+        bottom: -30%;
+    }
+}
+
+.article__sub {
+    font-size: 0.8em;
+
+    & span {
+        margin-right: 10px;
+    }
+
+    & span:last-child {
+        font-weight: 600;
+    }
+}
+
+
+/* wrapper  */
+
+.gallery {
+    /* width: 90%; */
+    display: flex;
+    flex-flow: column;
+}
+
+.gallery .gallery__wrapper {
+    width: 90%;
+    overflow: scroll;
+    display: grid;
+    grid-auto-columns: minmax(180px, 1fr);
+    grid-auto-flow: column;
+    grid-gap: 10px;
+    align-self: flex-end;
+}
+
+.gallery__item {
+    padding: 10px;
+}
+
+.gallery__photo {
+    width: 100%;
+    height: 130px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.gallery__title {
+    font-weight: 600;
+}
+
+.gallery__subtitle {
+    color: var(--colorgray);
+}
+
+.gallery__item:nth-child(1) .gallery__photo{
+    background-image: url(https://cdn.pixabay.com/photo/2017/10/04/18/14/ice-2817112__340.jpg);
+}
+
+.gallery__item:nth-child(2) .gallery__photo{
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/22/07/09/spruce-1848543__340.jpg);
+}
+
+.gallery__item:nth-child(3) .gallery__photo{
+    background-image: url(https://cdn.pixabay.com/photo/2016/02/19/10/47/frost-1209402__340.jpg);
+}
+
+.gallery__item:nth-child(4) .gallery__photo{
+    background-image: url(https://cdn.pixabay.com/photo/2015/07/27/22/58/mountains-863700__340.jpg);
+}
+
+.gallery__item:nth-child(5) .gallery__photo{
+    background-image: url(https://cdn.pixabay.com/photo/2019/06/04/16/07/mountains-4251750__340.jpg);
+}
+
+
+/* footer  */
+
+.footer {
+    height: 10vh;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer__title {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+
+.footer__input {
+    border-bottom: 1px solid black;
+    padding: 5px;
+
+    & input {
+        border: unset;
+        font-size: 1em;
+    }
+    
+    & span {
+        font-weight: 600;
+    }
+}
+
+.footer__icons {
+    & svg {
+        width: 15px;
+        padding: 5px
+    }
+}
