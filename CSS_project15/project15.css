@@ -1,0 +1,252 @@
+:root {
+    --colorLightgray: rgb(228, 228, 228);
+    --colorgray: rgb(195, 195, 195);
+    --colorDarkgray: rgb(160, 160, 160);
+    --colorDarkergray: rgb(45, 45, 46);
+    --colorPink: rgb(255, 151, 151);
+    --colorBlue: rgb(158, 218, 255);
+    --solid : 2px solid black;
+}
+    
+html, body { 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    width: 90vw;
+    position: absolute;
+    margin: 0 5vw;
+}
+
+
+/* header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    font-size: 0.8em;
+}
+
+.header__login {
+    & span:first-child {
+        color: var(--colorgray);
+    }
+
+    & span:nth-child(2) {
+        font-size: 0.5em;
+    }
+    
+    & span:last-child {
+        color: var(--colorBlue);
+    }
+}
+
+.header__myinfo {
+    & span {
+        margin-left: 10px;
+    }
+}
+
+
+/* header nav  */
+
+.header__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & ul {
+        list-style: none;
+        display: flex;
+    }
+}
+
+.header__nav .title {
+    font-size: 1.5em;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(min-content, 1fr));
+    height: 50px;
+    grid-gap: 20px;
+
+    & .title__letter:nth-child(even) {
+        align-self: end;
+    }
+}
+
+
+.header__nav .main__nav {
+    margin-top: 30px;
+
+    & .list__item {
+        font-size: 0.9em;
+        font-weight: 600;
+    }
+
+    & .list__divider {
+        margin: 0 25px;
+    }
+}
+
+
+.header__nav .main__cate {
+    & li {
+        margin: 0 5px 0 0;
+        font-size: 0.8em;
+        font-style: italic;
+        color: var(--colorgray);
+    }
+
+    & li:first-child {
+        color: black;
+    }
+}
+
+
+/* main */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.product__photo {
+    background-position: center center;
+    background-size: cover;
+}
+
+.main__product {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-auto-rows: 250px;
+    width: 80%;
+}
+
+.main__product .product__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2020/03/18/08/06/christmas-4943148__340.jpg);
+}
+
+.main__product .product__info {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+        
+    & .info__pretitle {
+        font-size: 0.6em;
+        color: var(--colorgray);
+    }
+
+    & .info__title {
+        display: flex;
+        justify-content: space-between;
+        font-style: italic;
+    }
+
+    & .info__comment {
+        font-size: 0.7em;
+        margin: 30px 0;
+    }
+
+    & .info__cart span {
+        background-color: var(--colorLightgray);
+        padding: 5px 10px;
+        font-size: 0.7em;
+    }
+
+    & .info__tag {
+        margin-top: 30px;
+        font-size: 0.7em;
+    }
+}
+
+
+.main__product2 {
+    height: 20vh;
+    width: 100%;
+    margin-top: 40px;
+
+    & .product__photo {
+        height: 20vh;
+        width: 100%;
+        background-image: url(https://cdn.pixabay.com/photo/2020/03/18/08/06/christmas-4943149_640.jpg);
+    }
+
+    & .product__viewmore {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 0.7em;
+        font-style: italic;
+    
+        & span:last-child {
+            color: var(--colorgray);
+        }
+    }
+}
+
+
+
+/* footer */
+
+.footer {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer__subscribe {
+    & .subscribe {
+        letter-spacing: 2px;
+        padding: 10px;
+        font-weight: 600;
+    }
+    
+    & .subtitle {
+        font-size: 0.7em;
+        font-style: italic;
+    }
+    
+    & .footer__input {
+        height: 30px;
+        display: flex;
+        align-content: center;
+        border: 1px solid var(--colorLightgray);
+        margin-top: 20px;
+
+        & input {
+            padding: 0;
+            border: none;
+        }
+
+        & .btn {
+            background-color: var(--colorPink);
+            font-size: 0.7em;
+            color: white;
+            vertical-align: middle;
+            padding: 6px 10px;
+        }
+    }
+}
+
+.footer__icons {
+    margin-top: 30px;
+
+    & svg {
+        width: 10px;
+        padding: 10px;
+    }
+}
+
+.copyright {
+    font-size: 0.7em;
+    color: var(--colorgray);
+    padding-bottom: 50px;
+}

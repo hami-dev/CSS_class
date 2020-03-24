@@ -31,7 +31,9 @@
     "project11": "parcel ./CSS_project11/project11.html",
     "project12": "parcel ./CSS_project12/project12.html",
     "project13": "parcel ./CSS_project13/project13.html",
-    "project14": "parcel ./CSS_project14/project14.html"
+    "project14": "parcel ./CSS_project14/project14.html",
+    "project15": "parcel ./CSS_project15/project15.html"
+
 
   },
   "devDependencies": {
