@@ -4,97 +4,43 @@
 }
 
 
-/* matches, include */
-/* li:matches(:nth-child(even), .target){
-  background-color: red;
-}  */
-
-
-
-/* not해준거만 제외하고, exclude */
-/* li:not(.target){
-  background-color: black;
-} */
-
-
-/* 위에 root에서 선언한 애들을 변수처럼 사용 가능 */
-/* li:nth-child(even) a{
-  color: var(--awesomeColor);
-  border: var(--coolLine);
-} */
-
-
-/* --headers 가 h1,h2,h3,h4,h5,h6을 포함하겠다는 뜻 */
-/* @custom-selector :--headers h1,h2,h3,h4,h5,h6; */
-
-/* 그래서 그 --headers 를 불러다가 스타일을 주면
-h1~h6이 전부 일괄적으로 바뀌게됨 
-하나하나 따로 설정 안해도 되고 */
-/* :--headers{
-  color: red;
-} */
-
-
-/* @custom-media --ipad-size (max-width: 850px); */
-/* @custom-media --ipad-size (width <= 850px); */
-/* @custom-media --ipad-size (600px <= width < 850px);
-
-@media (--ipad-size){
-  body{
-    background-color: var(--awesomeColor);
-  }
-} */
-
-
-/* color-mod */
-/* h1 {
-  color: #00cec9;
+.father {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  height: 100vh;
+  
+  /* wrap하면 child의 width를 보존할 수 있음 */
+  /* flex-wrap: wrap; */
 }
 
-h1:hover{
-  color: color-mod(#00cec9 blackness(50%));
-} */
+.child:nth-child(2) {
+  background-color: pink;
 
+  /* shrink를 하면 남들보다 2배 더 많이 줄어듬 (숫자 올리면 더많이 쭐어듬) */
+  /* flex-shrink: 2; */
 
-/* gray 숫자가 클수록 흐려진다*/
-/* h1 {
-  color : gray(90);
-} */
-
-
-/* system-ui = short cut! */
-/* h1 {
-  font-family: system-ui;
-} */
-
-
-
-/* Nesting rules */
-/* main{
-  background-color: blueviolet;
+  /* grow의 default값은 0인데 여분의 공간이 있을 시 grow정의된 애가 여분공간 다먹음 */
+  /* flex-grow: 1; */
 }
 
-main section{
-  background-color: red;
+.child {
+  width: 150px;
+  height: 150px;
+  background-color: var(--awesomeColor);
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* order는 html을 수정할 수 없는데 순서를 변경하고싶을 때 사용 */
+/* .child:nth-child(1) {
+  order: 2;
+}
+
+.child:nth-child(2) {
+  order: 3;
 } */
 
-main{
-  background-color: blueviolet;
 
-  & section{
-    background-color: red;
-    width: 600px;
-
-    & li{
-      background-color: yellow;
-      width: 300px;
-
-      & a{
-        color: black;
-        &:hover{
-          font-size: 50px;
-        }
-      }
-    }
-  }
-}
