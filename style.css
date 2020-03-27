@@ -5,42 +5,33 @@
 
 
 .father {
-  display: flex;
-  justify-content: space-around;
-  align-content: space-around;
-  height: 100vh;
-  
-  /* wrap하면 child의 width를 보존할 수 있음 */
-  /* flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(4, minmax(max-content, 1fr));
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
 }
 
-.child:nth-child(2) {
+.first {
   background-color: pink;
-
-  /* shrink를 하면 남들보다 2배 더 많이 줄어듬 (숫자 올리면 더많이 쭐어듬) */
-  /* flex-shrink: 2; */
-
-  /* grow의 default값은 0인데 여분의 공간이 있을 시 grow정의된 애가 여분공간 다먹음 */
-  /* flex-grow: 1; */
 }
 
-.child {
-  width: 150px;
-  height: 150px;
+.second {
   background-color: var(--awesomeColor);
-  font-size: 3em;
+}
+
+.third {
+  background-color: bisque;
+}
+
+.fourth {
+  background-color: thistle;
+}
+
+.father div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* order는 html을 수정할 수 없는데 순서를 변경하고싶을 때 사용 */
-/* .child:nth-child(1) {
-  order: 2;
-}
-
-.child:nth-child(2) {
-  order: 3;
-} */
 
 
